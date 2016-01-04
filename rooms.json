@@ -1,0 +1,119 @@
+﻿{
+	"comment" : "komentari se ne obrađuju, komentar može biti bilo što i bilo gdje",
+	"rooms" : [
+		{
+			"comment" : "demo - prva soba - viktorova soba",
+			"alias" : "viktorsRoom",
+			"gui" : "default",
+			"zoom" : 75,
+			"background" : "bcg_viktorsRoom",
+			"border" : "spr_border_viktorsRoom",
+			"startingItems" : [
+				{
+					"alias" : "keys",
+					"name" : "Keys",
+					"description" : "These keys open something, I'm just not sure what.",
+					"default" : "Not the right key for that. Or not the right lock?",
+					"picture" : "spr_item_keys"
+				},
+				{
+					"alias" : "log",
+					"name" : "The Captain's log",
+					"description" : "This log belonged to the Captain.",
+					"default" : "I logged it in.",
+					"picture" : "spr_item_log"
+				},
+				{
+					"alias" : "boat",
+					"name" : "A toy boat",
+					"description" : "This toy boat is found nowhere in the game.",
+					"picture" : "spr_martinsRoom_boat"
+				}
+			],
+			"entrances" : [
+				{
+					"alias" : "start",
+					"entrance" : "[position player 700 700] I can't believe I just got fired! > I really need to take a bath!"
+				},
+				{
+					"alias" : "door",
+					"entrance" : "[position player 150 600] Home, sweet home!"
+				},
+				{
+					"alias" : "phone",
+					"entrance" : "[animation player spr_viktor_phone_down] > Nobody's answering. > [if (test phone 1)] I need to find where I wrote Martin's phone number."
+				},
+				{
+					"alias" : "martin",
+					"entrance" : "[animation player spr_viktor_phone_down] > He hung up... > Time to go out and conquer the world! [set phone 2]"
+				}
+			],
+			"objects" : [
+				{
+					"comment" : "kljucevi pored viktorovih vrata",
+					"alias" : "sobaViktor_kljuc",
+					"available" : 1,
+					"visible" : 1,
+					"pictures" : {
+						"default" : "spr_viktorsRoom_keys"
+					},
+					"x" : 66, 
+					"y" : 468,
+					"xOffset" : 0,
+					"yOffset" : 0,
+					"xScale" : 1,
+					"yScale" : 1,
+					"xInteract" : 170,
+					"yInteract" : 700,
+					"description" : "Keys",
+					"combinations" : {
+						"look" : "I have no idea what these keys open. Ok.",
+						"kick" : "Die, keys, die! [mood ljut] > [viktor spr_viktor_udara_lijevo] > Damn, can't reach them...",
+						"use" : "[viktor spr_viktor_uzima_gore_lijevo][take][destroy]",
+						"talk" : "Are you the keymaster?",
+						"log": "A... Keylogger? > Get it, get it!?"
+					},
+					"inventory" : {
+						"alias" : "keys",
+						"name" : "Keys",
+						"description" : "These keys open something, I'm just not sure what.",
+						"default" : "Not the right key for that. Or not the right lock?",
+						"picture" : "spr_inventory_keys"
+					}
+				},
+				{
+					"comment" : "p",
+					"alias" : "sobaViktor_kljuc2",
+					"available" : 1,
+					"visible" : 1,
+					"pictures" : {
+						"default" : "spr_viktorsRoom_keys"
+					},
+					"x" : 866, 
+					"y" : 468,
+					"xOffset" : 0,
+					"yOffset" : 0,
+					"xScale" : 1,
+					"yScale" : 1,
+					"xInteract" : 870,
+					"yInteract" : 700,
+					"description" : "Keys",
+					"combinations" : {
+						"look" : "I have no idea what these keys open. > I hope this exclamation is there in the game!",
+						"kick" : "Die, keys, die! [mood ljut] > [viktor spr_viktor_udara_lijevo] > Damn, can't reach them...",
+						"use" : "[viktor spr_viktor_uzima_gore_lijevo][take][destroy]",
+						"talk" : "Are you the keymaster?",
+						"log": "A... Keylogger? > Get it, get it!?"
+					},
+					"inventory" : {
+						"alias" : "keys",
+						"name" : "Keys",
+						"description" : "These keys open something, I'm just not sure what.",
+						"default" : "Not the right key for that. Or not the right lock?",
+						"picture" : "spr_inventory_keys"
+					}
+				}
+			]
+		}
+	]
+}

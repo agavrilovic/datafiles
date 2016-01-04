@@ -1,0 +1,7 @@
+{
+	"room_speed" : 30,
+	"image_speed" : 30,
+	"action" : "menu main",
+	"cursor" : "spr_cursor_menu",
+	"multiple" : 1
+}

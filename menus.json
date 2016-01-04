@@ -1,0 +1,55 @@
+{
+	"menus" : [
+		{
+			"alias" : "main",
+			"background" : "bcg_main",
+			"rgb" : "238,232,178",
+			"music" : "snd_music_intro",
+			"buttons" : [
+				{
+					"x" : 304,
+					"y" : 448,
+					"picture" : "spr_menu_new",
+					"action" : "new viktorsRoom start"
+				},
+				{
+					"x" : 832,
+					"y" : 320,
+					"picture" : "spr_menu_load",
+					"action" : "load savegame.sav"
+				},
+				{
+					"x" : 1184,
+					"y" : 32,
+					"picture" : "spr_menu_exit",
+					"action" : "exit"
+				},
+				{
+					"x" : 510,
+					"y" : 384,
+					"picture" : "spr_menu_credits",
+					"action" : "menu credits"
+				},
+				{
+					"x" : 720,
+					"y" : 448,
+					"picture" : "spr_menu_web",
+					"action" : "web http://www.studiospektar.hr/viktor"
+				}
+			]
+		},
+		{
+			"alias" : "credits",
+			"background" : "bcg_credits",
+			"rgb" : "238,232,178",
+			"buttons" : [
+				{
+					"x" : 1111,
+					"y" : 861,
+					"picture" : "spr_menu_back",
+					"action" : "menu main"
+				}
+			]
+		}
+	]
+}

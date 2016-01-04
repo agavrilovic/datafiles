@@ -1,0 +1,57 @@
+{
+	"komentar" : "svi razgovori u jednom fajlu",
+	"conversations" : [
+		{
+		"komentar": "testni razgovor",
+		"alias" : "test",
+		"dialogues" : [
+			{
+			"id" : 1,
+			"text" : "Hello, how are you?",
+			"options": [
+				{
+				"condition": "[mood angry]",
+				"response": "Bad", 
+				"next": 2
+				},
+				{ 
+				"condition": "[mood default]",
+				"response": "Good!", 
+				"next": 3
+				},
+				{ 
+				"response": "I don't know, bye!", 
+				"next": 4
+				}
+			]
+			},
+			{
+			"id": 2,
+			"text": "[response] > [other] Aw, too bad... > [other] Why?",
+			"options": [
+				{
+				"response": "Fuck off and good bye.", 
+				"next": 4
+				}
+			]
+			},
+			{
+			"id": 3,
+			"text": "[response] > [other] Aw, that's nice... > [other] Why?",
+			"options": [
+				{
+				"response": "Because I shit rainbows! Bye!", 
+				"next": 4
+				}
+			]
+			},
+			{
+			"id": 4,
+			"text": "[response] > [other] Ok, bye.",
+			"options": [
+			]
+			}
+		]
+		}
+	]
+}
